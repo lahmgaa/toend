@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8" />
+     <title>4toend</title>
+   <style>
+       body{background-color: #161616; width: 1920px; height: 1080px; overflow: hidden;}
+       #header{width: 1080px; height: auto; position: absolute; left: calc(50% - 540px);}
+
+
+       #vi{width:1020px; position: absolute; left: calc(50% - 510px); top: calc(50% - 400px); z-index: 3;}
+
+       #select1{display: none;}
+
+       #game{width: 300px; height: 100px; color: white; background-color: #161616; font-size: 2em; position: absolute; left: calc(50% - 150px); top: calc(50% + 235px); z-index: 4; border: 0px solid #2eb8ce;}
+        #game:hover{cursor: pointer; background-color: #2eb8ce; border-radius: 10px;}
+
+       #div_main{position: absolute; left:calc(50% - 1500px); top: calc(50% - 700px); overflow: hidden;}
+       
+   </style>
+</head>
+<body>
+        <div id="div_main">
+            <img src="main3.png" id="main" width="3000" height="auto" overflow="hidden">
+        </div>
+
+   <div id="header"></div>
+
+   <video controls id="vi" autoplay>
+       <source id="vsrc" src="end.mp4" type="video/mp4">
+   </video>
+
+   <div id="select1">
+       <button onclick="play1();" id="game">혼자미디어!</button>
+
+   </div>
+
+</body>
+<script>
+       var stage = 0;
+       vi.onended = function(){
+          select1.style.display = "block";
+       }
+       function play1(){
+           vsrc.src = "1.mp4";
+
+            
+
+           vi.load();
+           vi.play();
+           select1.style.opacity = "0";
+           select2.style.display = "block";
+       }
+       
+       
+       
+   </script>
+
+
+</html>
